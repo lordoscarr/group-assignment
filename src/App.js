@@ -22,9 +22,9 @@ getWeather = async (e) => {
   const data = await api_call.json();
   if (city) {
     this.setState({
-      temperature: data.main.temp,
+      temperature: data.main.temp + "°C",
       city: data.name,
-      humidity: data.main.humidity,
+      humidity: data.main.humidity + "%",
       description: data.weather[0].description,
       error: ""
     });
@@ -42,18 +42,19 @@ render() {
         <div className="main">
           <div className="container">
             <div className="row">
-              <div className="col-xs-5 title-container">
+              <div className="weatherTitle">
                 <Titles />
               </div>
-              <div className="col-xs-7 form-container">
+              <div className="searchWeatherContainer">
                 <Form getWeather={this.getWeather} />
+                <div className="weatherDiv">
                 <Weather
                   temperature={this.state.temperature}
                   humidity={this.state.humidity}
                   city={this.state.city}
                   description={this.state.description}
-                  error={this.state.error}
-                />
+                  error={this.state.error} />
+                </div>
               </div>
             </div>
           </div>
