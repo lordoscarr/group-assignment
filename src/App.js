@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
@@ -37,30 +36,28 @@ getWeather = async (e) => {
 
 render() {
   return (
-    <div>
       <div className="wrapper">
-        <div className="main">
-          <div className="container">
-            <div className="row">
-              <div className="weatherTitle">
-                <Titles />
-              </div>
+      <header> WEATHER.IO </header>
+
               <div className="searchWeatherContainer">
-                <Form getWeather={this.getWeather} />
-                <div className="weatherDiv">
-                <Weather
-                  temperature={this.state.temperature}
-                  humidity={this.state.humidity}
-                  city={this.state.city}
-                  description={this.state.description}
-                  error={this.state.error} />
+                <Form getWeather={this.getWeather}/>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+                <div className="weatherDiv">
+                <div className="weatherWrapper">
+               <Weather
+                 temperature={this.state.temperature}
+                 humidity={this.state.humidity}
+                 city={this.state.city}
+                 description={this.state.description}
+                 error={this.state.error} />
+                 </div>
+               </div>
+
+           <div className="orkarInteFixaFooter"> </div>
+
+               <footer> MARCEL LASKA & OSCAR ANDERSSON </footer>
       </div>
-    </div>
   );
 }
 };
