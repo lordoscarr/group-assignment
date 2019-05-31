@@ -1,298 +1,146 @@
-@media screen and (min-width: 1025px) {
-  .wrapper {
-    overflow: hidden;
-  }
+.background-img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
 
-  body {
-    background-image: linear-gradient(lightskyblue, #33495E);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+.wrapper {
+  overflow: hidden;
+}
 
-  header {
-    color: white;
-    overflow: hidden;
-    font-family: "Impact";
-    text-align: center;
-    font-size: 50px;
-    background-image: url("GIFs/wallpaper1.gif");
-    background-color: #33495E;
-    background-size: 25% 100%;
-    background-repeat: no-repeat;
-  }
+.logo-img {
+  position: absolute;
+  left: calc(50% - 70px);
+  bottom: 5px;
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100px;
+}
 
-  .weatherTitle {
-    text-align: center;
-  }
+header {
+  color: white;
+  overflow: hidden;
+  text-align: center;
+  font-size: 20px;
+  background-color: #33495E;
+}
 
-  .searchWeatherContainer {
-    background-image: linear-gradient(lightskyblue);
-    border-top: 10px solid white;
-    padding-top: 50px;
-    text-align: center;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-  }
+header h1 {
+  margin: 5px;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
 
-  #inputCity {
-    font-family: "Impact";
-    font-size: 50px;
-    margin-left: 20%;
-    margin-right: 1%;
-  }
+.weatherTitle {
+  text-align: center;
+}
 
-  #getWeatherButton {
-    font-size: 50px;
-    margin-right: 20%;
-    font-family: "Impact";
-    border-radius: 10px;
-  }
+.searchWeatherContainer {
+  background: rgba(0, 0, 0, .4);
+  padding: 10px;
+  text-align: center;
+}
 
-  .weatherWrapper {}
+#inputCity {
+  font-weight: lighter;
+  margin-right: 1%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-transform: lowercase;
+  font-size: 20px;
+}
 
-  .weatherDiv {
-    background-image: url("GIFs/rain.gif");
-    background-size: cover;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-family: "Impact";
-    font-size: 50px;
-    border-radius: 10px;
-    border: 5px solid white;
-    color: white;
-    margin-bottom: 25px;
-  }
+#getWeatherButton {
+  font-weight: lighter!important;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #33495E;
+  color: white;
+  text-transform: lowercase;
+  font-weight: lighter;
+}
 
-  .weather__info {
-    color: white;
-    background-color: black;
-    width: 35%;
-    opacity: 0.5;
-    height: 100%;
-    padding: 0.1px;
-    border-radius: 5px;
-    padding-left: 50px;
-  }
+.weatherDiv {
+  font-weight: lighter;
+  margin: 20px;
+  font-size: 20px;
+  color: white;
+}
 
-  .orkarInteFixaFooter {
-    height: 100px;
-  }
+.locationtitle h1 {
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, .4);
+  width: fit-content;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
-  footer {
-    background-color: #33495E;
-    color: white;
-    font-family: "Impact";
-    font-size: 50px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 100px;
-  }
+.weather__info {
+  color: white;
+  background: rgba(0, 0, 0, .4);
+  width: fit-content;
+}
+
+.weather__info p {
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  padding-right: 10px;
+}
+
+.weather__info p:last-child {
+  border: none;
+}
+
+footer {
+  background-color: #33495E;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: lighter;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
 }
 
 @media screen and (min-width: 501px) and (max-width: 1024px) {
-  .wrapper {
-    height: 100vh;
-  }
-
-  body {
-    background-image: linear-gradient(lightskyblue, #33495E);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
-  header {
-    color: white;
-    overflow: hidden;
-    font-family: "Impact";
-    text-align: center;
-    height: 200px;
-    width: 100%;
-    background-image: url("GIFs/wallpaper1.gif");
-    background-color: #33495E;
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
-  }
-
-  h1 {
-    font-size: 50px;
-    padding-top: 30px;
-    padding-left: 200px;
-  }
-
-  .weatherTitle {
-    text-align: center;
-  }
-
-  .searchWeatherContainer {
-    background-image: linear-gradient(lightskyblue);
-    border-top: 5px solid white;
-    padding-top: 50px;
-    text-align: center;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-  }
-
-  #inputCity {
-    font-size: 30px;
-    margin-left: 10%;
-    margin-right: 10px;
-    font-family: "Impact";
-  }
-
-  #getWeatherButton {
-    font-family: "Impact";
-    font-size: 30px;
-    margin-right: 10%;
-    background-color: lightgray;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-
-  .weatherWrapper {}
-
-  .weatherDiv {
-    background-image: url("GIFs/rain.gif");
-    background-size: cover;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-family: "Impact";
-    font-size: 25px;
-    border-radius: 10px;
-    border: 5px solid white;
-    color: white;
-    margin-bottom: 25px;
-  }
-
-  .weather__info {
-    color: white;
-    background-color: black;
-    width: 40%;
-    opacity: 0.5;
-    height: 100%;
-    padding: 0.1px;
-    border-radius: 5px;
+  .locationtitle h1 {
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .4);
+    width: fit-content;
+    padding-right: 10px;
     padding-left: 10px;
-  }
-
-  .orkarInteFixaFooter {
-    height: 100px;
-  }
-
-  footer {
-    background-color: #33495E;
-    color: white;
-    font-family: "Impact";
-    font-size: 25px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 25px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .wrapper {
-    height: 100vh;
-  }
-
-  body {
-    background-image: linear-gradient(lightskyblue, #33495E);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
-  header {
-    color: white;
-    overflow: hidden;
-    font-family: "Impact";
-    text-align: center;
-    height: 200px;
-    width: 100%;
-    background-image: url("GIFs/wallpaper1.gif");
-    background-color: #33495E;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  .weatherTitle {
-    text-align: center;
-  }
-
-  .searchWeatherContainer {
-    background-image: linear-gradient(lightskyblue);
-    border-top: 5px solid white;
-    padding-top: 50px;
-    text-align: center;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-  }
-
-  #inputCity {
-    font-family: "Impact";
-    font-size: 25px;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  #getWeatherButton {
-    font-size: 25px;
-    font-family: "Impact";
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: lightgray;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-
-  .weatherWrapper {}
-
-  .weatherDiv {
-    background-image: url("GIFs/rain.gif");
-    background-size: cover;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-family: "Impact";
-    font-size: 10px;
-    border-radius: 10px;
-    border: 5px solid white;
-    color: white;
-    margin-bottom: 25px;
-  }
-
-  .weather__info {
-    color: white;
-    background-color: black;
-    width: 35%;
-    opacity: 0.5;
-    height: 100%;
-    padding: 0.1px;
-    border-radius: 5px;
+  .locationtitle h1 {
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .4);
+    width: fit-content;
+    padding-right: 10px;
     padding-left: 10px;
-  }
-
-  .orkarInteFixaFooter {
-    height: 100px;
-  }
-
-  footer {
-    background-color: #33495E;
-    color: white;
-    font-family: "Impact";
-    font-size: 15px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 25px;
   }
 }
