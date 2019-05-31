@@ -3,6 +3,7 @@ import './App.css';
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import AnimatedBackground from "./components/AnimatedBackground";
+import LatestCities from "./components/LatestCities";
 
 const API_KEY = "c9f2fcc97c2431dabd58531b5f586b59";
 
@@ -14,23 +15,42 @@ class App extends Component {
     pressure: undefined,
     description: undefined,
     image: 'GIFs/sun.gif',
+    cities: [],
     error: undefined
+  }
+
+  saveCity(city) {
+    let cities = JSON.parse(localStorage.getItem('cities'));
+    if (!cities) {
+      cities = [];
+    }
+    if(!cities.includes(city)){
+      cities.unshift(city);
+    }
+    if (cities.length > 3) {
+      cities.pop();
+    }
+    console.log(cities.length);
+    localStorage.setItem('cities', JSON.stringify(cities));
   }
 
   getWeather = async (e) => {
     e.preventDefault();
+
     const city = e.target.elements.city.value;
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
-    if (city && data.weather[0]) {
+    if (city && city.length > 0 && data.weather[0]) {
+      this.saveCity(city);
+      this.getHistory();
       let img = 'GIFs/sun.gif';
-      if(data.weather[0].description.includes('cloud')){
+      if (data.weather[0].description.includes('cloud')) {
         img = 'GIFs/clouds.gif';
-      }else if(data.weather[0].description.includes('rain')){
+      } else if (data.weather[0].description.includes('rain')) {
         img = 'GIFs/rain.gif';
-      }else if(data.weather[0].description.includes('storm')){
+      } else if (data.weather[0].description.includes('storm')) {
         img = 'GIFs/storm.gif';
-      }else if(data.weather[0].description.includes('snow')){
+      } else if (data.weather[0].description.includes('snow')) {
         img = 'GIFs/snow.gif';
       }
       this.setState({
@@ -56,15 +76,29 @@ class App extends Component {
     }
   }
 
+  getHistory() {
+    let cities = JSON.parse(localStorage.getItem('cities'));
+    if(cities){
+      this.setState({cities: cities});
+      console.log('saved cities: ' + cities.length);
+    }
+    return this.props.cities;
+  }
+
+  componentWillMount() {
+    this.getHistory();
+  }
+
   render() {
     return (
       <div className="wrapper">
-        <AnimatedBackground image={this.state.image} /> 
+        <AnimatedBackground image={this.state.image} />
         <img className="logo-img" src="GIFs/wallpaper1.gif" alt="background weather" />
         <header> <h1>Weather.io</h1> </header>
         <div className="searchWeatherContainer">
           <Form getWeather={this.getWeather} />
         </div>
+        <LatestCities cities={this.state.cities}/>
 
         <div className="weatherDiv">
           <div className="weatherWrapper">

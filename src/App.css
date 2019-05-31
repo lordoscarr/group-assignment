@@ -34,6 +34,22 @@ header h1 {
   text-transform: lowercase;
 }
 
+.history-menu {
+  background: rgba(0, 0, 0, .4);
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  text-transform: lowercase;
+}
+
+.history-city {
+  padding: 10px;
+}
+
+.recent-text {
+  font-weight: bold;
+}
+
 .weatherTitle {
   text-align: center;
 }
