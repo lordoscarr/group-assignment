@@ -1,18 +1,19 @@
 # Group assignment
 
-**Kursens krav på projektet:** 
+## Why React?
 
-- Ni ska motivera ert val av JS-ramverk, genom en jämförelse med minst två andra JS-ramverk. Inkludera källor.
-- Ni ska bygga en webbapplikation med valt ramverk, med minimum-krav:
-- Ni ska använda er av minst ett externt webb-API (som inte är något av de API som använts vid någon laboration)
-- Ni ska tillåta användaren att spara data i relation till API:t (lämplige genom localStorage)
-    - T.ex. ett filmbibliotek om man använder ett film-API
-    - T.ex. statistik / diagram om vädertemperaturer de senaste vädersökningarna om man använder ett väder-API
-- Ni ska använda er utav Github för versionshantering av ert projekt
-- Ni ska ha ett grafiskt gränssnitt på er webbapplikation med fokus på användbarhet för olika enheter. Webbsidorna ska se fina ut i mobil/surfplatta/dator.
+We chose React due to it's huge market share, aswell as for personal gain due to React being in the majority of job adverts.
+
+As mentioned in an article on [Medium](https://medium.com/@TechMagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d), React is mentioned in 78.1% of open job positions, out of 60.000.
+
+![Pie chart of share in open positions](doc-img/pie.png)
+
+Also, React seemed the easiest to get started with.
+Vue is relatively new and doesn't have as much documentation online about how to use it, and we read that Angular was quite heavy for "beginners". 
+
+Source: [Syndicode](https://syndicode.com/2019/04/15/angular-vs-react-vs-vue-battle-with-pros-and-cons-for-all-of-them/)
 
 
-[Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
